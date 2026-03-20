@@ -54,10 +54,10 @@ Backuping the current configurations
 3. **停止一部分业务服务**
    - fail-safe、NTP、DHCP monitor、VNC、SSH、TELNET、cron、IPMI stack、Redfish、redis 等都被依次停止。
    - 这是为了避免升级时还有业务进程占用文件系统、flash、配置文件。
-4. **把运行态配置刷回磁盘**
+4. **把运行态配置刷回磁盘（eMMC）**
    - `Flushing IPMI configurations to INI files`
    - 把内存中的配置落盘，避免升级后配置丢失。
-5. **备份配置**
+5. **备份配置**（eMMC）
    - `Backuping the current configurations`
    - 为升级后恢复配置做准备。
 
